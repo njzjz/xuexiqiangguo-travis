@@ -1,0 +1,9 @@
+dist: trusty
+language: python
+python: 3.6
+addons:
+  chrome: stable
+install:
+- pip install -U selenium
+- wget https://raw.githubusercontent.com/Alivon/Panda-Learning/master/pandalearn.py -O pandalearn.py
+script: python pandalearn.py
