@@ -6,4 +6,4 @@ addons:
 install:
 - pip install requests selenium
 - wget https://raw.githubusercontent.com/Alivon/Panda-Learning/master/pandalearn.py -O pandalearn.py
-script: python pandalearn.py
+script: { echo $user; echo $password; } | python pandalearn.py
