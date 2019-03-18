@@ -8,5 +8,5 @@ install:
 - wget https://raw.githubusercontent.com/Alivon/Panda-Learning/linux/pandalearning-linux/pandalearning-linux.zip -O pandalearning-linux.zip
 - unzip pandalearning-linux.zip
 - cd pandalearning-linux
-- chmod +x pandalearn
+- chmod +x pandalearn chromedriver
 script: echo -e "$user\n$password" | ./pandalearn
