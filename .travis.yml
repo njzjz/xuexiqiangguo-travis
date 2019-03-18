@@ -3,10 +3,12 @@ language: python
 python: 3.6
 addons:
   chrome: stable
+services:
+- xvfb
 install:
 # - pip install requests selenium
 - wget https://raw.githubusercontent.com/Alivon/Panda-Learning/linux/pandalearning-linux/pandalearning-linux.zip -O pandalearning-linux.zip
 - unzip pandalearning-linux.zip
 - cd pandalearning-linux
 - chmod +x pandalearn chromedriver
-script: echo -e "$user\n$password" | ./pandalearn
+script: echo -e "$user\n$password" | xvfb-run ./pandalearn
