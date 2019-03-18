@@ -4,7 +4,8 @@ python: 3.6
 addons:
   chrome: stable
 install:
-- pip install requests selenium
+# - pip install requests selenium
 - wget https://raw.githubusercontent.com/Alivon/Panda-Learning/linux/pandalearning-linux/pandalearning-linux.zip -O pandalearning-linux.zip
 - unzip pandalearning-linux.zip
-script: echo -e "$user\n$password" | python pandalearn.py
+- cd pandalearning-linux
+script: echo -e "$user\n$password" | ./pandalearning-linux
