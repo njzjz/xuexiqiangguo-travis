@@ -1,18 +1,5 @@
-dist: trusty
-language: python
-python: 3.6
-addons:
-  chrome: stable
 services:
-- xvfb
+  - docker
 install:
-# - pip install requests selenium
-- wget https://raw.githubusercontent.com/Alivon/Panda-Learning/linux/pandalearning-linux/pandalearning-linux.zip -O pandalearning-linux.zip
-- unzip pandalearning-linux.zip
-- cd pandalearning-linux
-- chmod +x pandalearn chromedriver
-before_script:
-- "export DISPLAY=:99.0"
-- "sh -e /etc/init.d/xvfb start"
-- sleep 3
-script: echo -e "$user\n$password" | ./pandalearn
+  - docker build github.com/fuck-xuexiqiangguo/docker -t xuexi
+  - docker run xuexi
