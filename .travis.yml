@@ -1,5 +1,8 @@
 services:
-  - docker
+- xvfb
 install:
-  - docker build github.com/fuck-xuexiqiangguo/docker -t xuexi
-  - docker run xuexi
+- wget -O fuck-xuexiqiangguo.zip https://github.com/fuck-xuexiqiangguo/Fuck-XueXiQiangGuo/raw/master/Fuck学习强国-linux.zip
+- unzip -q -d ./fuck-xuexiqiangguo/ fuck-xuexiqiangguo.zip
+- chmod +x fuck-xuexiqiangguo/Fuck学习强国
+run:
+- xvfb run fuck-xuexiqiangguo/Fuck学习强国 --headless --username=$user --passwd=$password
