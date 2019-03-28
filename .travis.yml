@@ -2,4 +2,4 @@ services:
   - docker
 install:
   - docker build github.com/fuck-xuexiqiangguo/docker -t xuexi
-  - docker run xuexi
+  - docker run xuexi sh -c "Xvfb -ac -screen scrn 1280x2000x24 :9.0 & wget -nv -O /app/resources/app.asar https://github.com/fuck-xuexiqiangguo/Fuck-XueXiQiangGuo/raw/master/app.asar && /app/Fuck学习强国 --headless --username=$user --password=$password"
