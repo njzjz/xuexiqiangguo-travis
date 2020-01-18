@@ -8,4 +8,4 @@ install:
 - unzip -q -d ./fuck-xuexiqiangguo/ fuck-xuexiqiangguo.zip
 - chmod +x fuck-xuexiqiangguo/Fuck学习强国
 script:
-- xvfb-run fuck-xuexiqiangguo/Fuck学习强国 --headless --username=$user --passwd=$password
+- xvfb-run -a fuck-xuexiqiangguo/Fuck学习强国 --headless --username=$user --passwd=$password
