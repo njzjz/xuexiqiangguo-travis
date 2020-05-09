@@ -9,4 +9,4 @@ install:
 - mv fuck-xuexiqiangguo/Fuck* fuck-xuexiqiangguo/Fuck
 - chmod +x fuck-xuexiqiangguo/Fuck
 script:
-- xvfb-run -a fuck-xuexiqiangguo/Fuck --headless --username=$user --passwd=$password --dev
+- xvfb-run -a fuck-xuexiqiangguo/Fuck --headless --dev
